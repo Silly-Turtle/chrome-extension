@@ -1,0 +1,18 @@
+{
+  "name": "Codesmith Chrome-Extension",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "manifest_version": 2,
+
+  "chrome_url_overrides" : {
+    "newtab": "newtab.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/_/chrome/newTab?ie=UTF-8"],
+      "js": ["./main.js"]
+    }
+  ],
+  "permissions" : ["activeTab"]
+}
